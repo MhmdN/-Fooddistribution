@@ -19,17 +19,17 @@ int main() {
 	if (today.day == 30 && today != checkdate) sellAnalysis();
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10);
 	cout << "Enter What to Do?\n";
-	cout << "(Add Store, Edit Store, Add Cargo, Edit Cargo,\n";
+	cout << "(Add Store, Show and Edit Store, Add Cargo, Show and Edit Cargo,\n";
 	cout << " Add Order, Delivered Order, Delivered ReducSell, Exit)\n";
 	for (; ; ) {
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 12);
 		getline(cin, str);
 		if (str == "Exit") break;
 		else if (str == "Add Store") addStore();
-		else if (str == "Edit Store") editStore();
+		else if (str == "Show and Edit Store") editStore();
 		else if (str == "Add Order") addOrder();
 		else if (str == "Add Cargo") addCargo();
-		else if (str == "Edit Cargo") editCargo();
+		else if (str == "Show and Edit Cargo") editCargo();
 		else if (str == "Delivered Order") deliveredOrder();
 		else if (str == "Delivered ReducSell") deliveredReducSell();
 		else if (str == "\n");
